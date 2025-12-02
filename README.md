@@ -286,3 +286,9 @@ This project is licensed under the MIT License. See `LICENSE` file for details.
 **Verification Status:** All A1–A10 and R1–R9 tests PASS  
 **Documentation:** See `VERIFICATION_SUMMARY.md` for complete validation record
 
+Software repository:
+https://github.com/hameljeanmichel418-eng/SelfRegulatingCosmology_CLASS_V2.5
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17785137.svg)](https://doi.org/10.5281/zenodo.17785137)
+
+
