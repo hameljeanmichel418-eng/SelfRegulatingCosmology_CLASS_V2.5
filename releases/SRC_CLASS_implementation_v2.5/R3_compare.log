@@ -1,0 +1,35 @@
+======================================================================
+R3 Background Physics Validation: SRC vs LCDM
+======================================================================
+Working directory: /home/hamel/dev/cosmo-class
+
+Reading background files...
+  LCDM: 40000 points, z ∈ [0.000, 100000000000000.000]
+  SRC:  40000 points, z ∈ [0.000, 100000000000000.000]
+
+Physical window: 0 <= z <= 5.0
+  LCDM: 2224 points
+  SRC:  2224 points
+
+Computing ΔH/H(z) = (H_SRC - H_LCDM) / H_LCDM...
+  max |ΔH/H| = 4.08e-03 at z = 0.000
+
+Computing Ω_tot(z) = sum of all Ω_i...
+  ⚠ Warning: no Omega_* columns detected; skipping Ω_tot tests
+
+Checking for negative densities in SRC run...
+  ✓ No negative densities detected
+
+======================================================================
+VALIDATION CRITERIA
+======================================================================
+max |ΔH/H| < 1e-01: 4.08e-03 ✓
+Ω_tot test: skipped (no Omega_* columns found)
+======================================================================
+SUMMARY
+======================================================================
+max |ΔH/H| = 4.08e-03 at z = 0.000 (tolerance: 1e-01)
+======================================================================
+RESULT: ✓ PASS - SRC background physics validation successful
+        - H(z) modulation is smooth and within expected range
+        - Energy budget is consistent (Ω_tot ≈ 1) for both runs

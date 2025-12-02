@@ -1,0 +1,36 @@
+Reading input parameters
+ -> matched budget equations by adjusting Omega_fld = 0.690026
+Running CLASS version v3.3.3
+Computing background
+ -> age = 13.770598 Gyr
+ -> conformal age = 14151.897989 Mpc
+ -> N_eff = 3.044 (summed over all species that are non-relativistic at early times) 
+ -> radiation/matter equality at z = 3405.751108
+    corresponding to conformal time = 112.722902 Mpc
+Computing thermodynamics using HyRec 2020
+ -> with primordial helium mass fraction Y_He = 0.2453
+ -> recombination (maximum of visibility function) at z = 1088.772283
+    corresponding to conformal time = 280.650572 Mpc
+    with comoving sound horizon = 144.510391 Mpc
+    angular diameter distance = 12.728574 Mpc
+    sound horizon angle 100*theta_s = 1.041798
+    Thomson optical depth crosses one at z_* = 1085.126670
+    giving an angle 100*theta_* = 1.044145
+ -> baryon drag stops at z = 1059.919244
+    corresponding to conformal time = 286.316631 Mpc
+    with comoving sound horizon rs = 147.071614 Mpc
+ -> reionization at z = 7.670059
+    corresponding to conformal time = 5127.540389 Mpc
+Computing sources
+Computing primordial spectra (analytic spectrum)
+Computing linear Fourier spectra.
+ -> sigma8=0.825009 for total matter (computed till k = 8.40772 h/Mpc)
+Computing non-linear matter power spectrum with Halofit (including update Takahashi et al. 2012 and Bird 2014)
+ -> [WARNING:] Non-linear corrections could not be computed at redshift z= 3.34 and higher.
+    This is because k_max is too small for the algorithm (Halofit or HMcode) to be able to compute the scale k_NL at this redshift.
+    If non-linear corrections at such high redshift really matter for you,
+    just try to increase the precision parameter nonlinear_min_k_max (currently at 5.000000e+00) until k_NL can be computed at the desired z.
+Computing transfers
+Computing unlensed harmonic spectra
+Computing lensed spectra (fast mode)
+Writing output files in output/src_gamma0/src_gamma0_... 

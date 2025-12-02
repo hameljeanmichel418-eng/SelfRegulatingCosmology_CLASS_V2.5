@@ -1,0 +1,44 @@
+======================================================================
+R7 ISW & low-ℓ TT Diagnostics: SRC vs LCDM
+======================================================================
+Working directory: /home/hamel/dev/cosmo-class
+
+Loading lensed Cl_TT spectra...
+  LCDM: CLASS_clean/output/R4_lcdm/R4_lcdm_cl_lensed.dat
+  SRC:  CLASS/output/R4_src/R4_src_cl_lensed.dat
+
+Loaded LCDM: 2499 multipoles, ℓ ∈ [2, 2500]
+Loaded SRC:  2499 multipoles, ℓ ∈ [2, 2500]
+
+======================================================================
+Low-ℓ TT Diagnostics (lensed Cl_TT)
+======================================================================
+
+ℓ in [2,10]:
+  max |ΔC_ℓ/C_ℓ| = 6.511309e-04 at ℓ = 2
+  RMS |ΔC_ℓ/C_ℓ| = 2.721431e-04
+
+ℓ in [2,50]:
+  max |ΔC_ℓ/C_ℓ| = 6.511309e-04 at ℓ = 2
+  RMS |ΔC_ℓ/C_ℓ| = 1.363542e-04
+
+ISW amplitude proxy (2 ≤ ℓ ≤ 30):
+  A_ISW = Σ D_ℓ^SRC / Σ D_ℓ^LCDM = 1.000053e+00
+
+======================================================================
+SUMMARY
+======================================================================
+max |ΔC_ℓ/C_ℓ| (2≤ℓ≤10)  = 6.511309e-04 (tolerance: 3e-02) ✓
+max |ΔC_ℓ/C_ℓ| (2≤ℓ≤50)  = 6.511309e-04 (tolerance: 2e-02) ✓
+RMS |ΔC_ℓ/C_ℓ| (2≤ℓ≤50) = 1.363542e-04 (tolerance: 1e-02) ✓
+A_ISW (2≤ℓ≤30)           = 1.000053e+00
+======================================================================
+
+RESULT: ✓ PASS - SRC low-ℓ TT power remains within tolerances
+        of ΛCDM in the ISW-sensitive regime.
+
+======================================================================
+Exporting data file...
+======================================================================
+Saved to: R7_outputs/R7_deltaCl_lowL.dat
+

@@ -1,0 +1,10 @@
+[1;33m=== R2 Precision-Stability Validation ===[0m
+Working directory: /home/hamel/dev/cosmo-class
+
+[1;33m[1/4] Setting up R2 ini files...[0m
+[0;32m✓ Copied ini files to CLASS/[0m
+[1;33m[2/4] Creating output directories...[0m
+[0;32m✓ Output directories created[0m
+[1;33m[3/4] Running base precision SRC...[0m
+[0;32m✓ Base precision run completed[0m
+[1;33m[4/4] Running high-accuracy precision SRC...[0m

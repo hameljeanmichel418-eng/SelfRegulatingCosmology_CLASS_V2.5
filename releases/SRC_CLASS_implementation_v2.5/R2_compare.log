@@ -1,0 +1,45 @@
+======================================================================
+R2 Precision-Stability Validation: Base vs High-Accuracy SRC
+======================================================================
+Working directory: /home/hamel/dev/cosmo-class
+
+Comparing H(z) from background files...
+  ✓ max ΔH/H = 4.87e-08 (tolerance: 1e-03)
+
+Comparing P(k) at z=0...
+  ✓ max ΔP/P = 5.82e-02 (tolerance: 1e-01)
+    Maximum occurs at k = 7.677977e+00 h/Mpc
+
+P(k) physical window (k <= 1 h/Mpc)...
+  ✓ max ΔP/P (k <= 1 h/Mpc) = 1.07e-02 (tolerance: 2e-02)
+      at k = 8.881935e-01 h/Mpc
+
+Comparing P(k) at z=1...
+  ✓ max ΔP/P = 5.82e-02 (tolerance: 1e-01)
+    Maximum occurs at k = 7.677977e+00 h/Mpc
+
+Comparing C_ℓ^TT (lensed) from CMB files...
+  ✓ max ΔC_ℓ/C_ℓ = 5.81e-03 (tolerance: 1e-02)
+    Maximum occurs at ℓ = 2500.0
+
+C_ℓ^TT physical window (ℓ <= 2000)...
+  ✓ max ΔC_ℓ/C_ℓ (ℓ <= 2000) = 2.38e-04 (tolerance: 1e-02)
+      at ℓ = 1496.0
+
+======================================================================
+SUMMARY
+======================================================================
+max ΔH/H        = 4.87e-08 (tolerance: 1e-03) ✓
+max ΔP/P (z=0)  = 5.82e-02 (tolerance: 1e-01) ✓
+                at k = 7.677977e+00 h/Mpc
+max ΔP/P (z=1)  = 5.82e-02 (tolerance: 1e-01) ✓
+                at k = 7.677977e+00 h/Mpc
+max ΔC_ℓ/C_ℓ    = 5.81e-03 (tolerance: 1e-02) ✓
+                at ℓ = 2500.0
+max ΔP/P (phys, k<=1)  = 1.07e-02 (tolerance: 2e-02) ✓
+                       at k = 8.881935e-01 h/Mpc
+max ΔC_ℓ/C_ℓ (phys, ℓ<=2000) = 2.38e-04 (tolerance: 1e-02) ✓
+                              at ℓ = 1496.0
+======================================================================
+RESULT: ✓ PASS - SRC model is stable under precision changes
+        Differences are within expected numerical convergence limits

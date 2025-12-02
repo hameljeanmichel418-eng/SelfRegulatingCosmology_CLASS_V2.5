@@ -1,0 +1,27 @@
+======================================================================
+R1 Regression Test: CLASS_clean vs CLASS (SRC gamma0=0)
+======================================================================
+Working directory: /home/hamel/dev/cosmo-class
+
+Comparing H(z) from background files...
+  ✓ max ΔH/H = 0.00e+00 (tolerance: 1e-04)
+
+Comparing P(k) at z=0...
+  ✓ max ΔP/P = 0.00e+00 (tolerance: 1e-03)
+
+Comparing P(k) at z=1...
+  ✓ max ΔP/P = 0.00e+00 (tolerance: 1e-03)
+
+Comparing C_ℓ^TT from CMB files...
+  ✓ max ΔC_ℓ/C_ℓ = 0.00e+00 (tolerance: 1e-03)
+
+======================================================================
+SUMMARY
+======================================================================
+max ΔH/H        = 0.00e+00 (tolerance: 1e-04) ✓
+max ΔP/P (z=0)  = 0.00e+00 (tolerance: 1e-03) ✓
+max ΔP/P (z=1)  = 0.00e+00 (tolerance: 1e-03) ✓
+max ΔC_ℓ/C_ℓ    = 0.00e+00 (tolerance: 1e-03) ✓
+======================================================================
+RESULT: ✓ PASS - SRC implementation is numerically indistinguishable
+        from standard CLASS when src_gamma0 = 0

@@ -1,0 +1,8 @@
+
+
+Error running input_init 
+=>input_init(L:78) :error in input_read_from_file(&fc,ppr,pba,pth,ppt,ptr,ppm,phr,pfo,ple,psd,pop, errmsg);
+=>input_read_from_file(L:407) :error in input_read_precisions(pfc,ppr,pba,pth,ppt,ptr,ppm,phr,pfo,ple,psd,pop, errmsg);
+=>input_read_precisions(L:587) :error in parser_read_int(pfc,"accurate_lensing",&int_temp,&flag_temp,errmsg);
+=>parser_read_int(L:189) :condition (sscanf(pfc->value[index],"%d",value) != 1) is true; could not read value of parameter 'accurate_lensing' in file 'src_R2_hiacc.ini'
+

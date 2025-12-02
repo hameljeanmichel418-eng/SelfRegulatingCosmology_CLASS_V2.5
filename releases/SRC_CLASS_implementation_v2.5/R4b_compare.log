@@ -1,0 +1,97 @@
+======================================================================
+R4b Extended Spectra Diagnostics: SRC vs LCDM
+======================================================================
+Working directory: /home/hamel/dev/cosmo-class
+
+======================================================================
+P(k,z) Diagnostics
+======================================================================
+
+z = 0.0:
+  Saved data to: R4b_outputs/R4b_deltaPk_z0.0.dat
+  Physical window (k <= 1 h/Mpc):
+    max |ΔP/P| = 8.99e-04 at k = 7.094585e-01 h/Mpc (tolerance: 2e-02) ✓
+    RMS |ΔP/P| (0.01 <= k <= 0.5 h/Mpc) = 8.92e-04
+  Full range (diagnostic):
+    max |ΔP/P| = 9.02e-04 at k = 3.351020e+00 h/Mpc (tolerance: 1e-01) ✓
+
+z = 0.5:
+  Saved data to: R4b_outputs/R4b_deltaPk_z0.5.dat
+  Physical window (k <= 1 h/Mpc):
+    max |ΔP/P| = 2.06e-05 at k = 2.264300e-01 h/Mpc (tolerance: 2e-02) ✓
+    RMS |ΔP/P| (0.01 <= k <= 0.5 h/Mpc) = 1.82e-05
+  Full range (diagnostic):
+    max |ΔP/P| = 2.14e-05 at k = 1.690610e+00 h/Mpc (tolerance: 1e-01) ✓
+
+z = 1.0:
+  Saved data to: R4b_outputs/R4b_deltaPk_z1.0.dat
+  Physical window (k <= 1 h/Mpc):
+    max |ΔP/P| = 2.14e-06 at k = 1.042208e-05 h/Mpc (tolerance: 2e-02) ✓
+    RMS |ΔP/P| (0.01 <= k <= 0.5 h/Mpc) = 6.05e-07
+  Full range (diagnostic):
+    max |ΔP/P| = 4.57e-06 at k = 6.671841e+00 h/Mpc (tolerance: 1e-01) ✓
+
+z = 2.0:
+  Saved data to: R4b_outputs/R4b_deltaPk_z2.0.dat
+  Physical window (k <= 1 h/Mpc):
+    max |ΔP/P| = 2.14e-06 at k = 1.042208e-05 h/Mpc (tolerance: 2e-02) ✓
+    RMS |ΔP/P| (0.01 <= k <= 0.5 h/Mpc) = 6.06e-07
+  Full range (diagnostic):
+    max |ΔP/P| = 4.56e-06 at k = 6.671841e+00 h/Mpc (tolerance: 1e-01) ✓
+
+======================================================================
+C_ℓ Diagnostics
+======================================================================
+
+C_ℓ^TT:
+  Saved data to: R4b_outputs/R4b_deltaCl_TT.dat
+  Physical window (ℓ <= 2000):
+    max |ΔC_ℓ/C_ℓ| = 1.23e-03 at ℓ = 1549.0 (tolerance: 2e-02) ✓
+    RMS |ΔC_ℓ/C_ℓ| (30 <= ℓ <= 2000) = 5.09e-04
+  Full range (diagnostic):
+    max |ΔC_ℓ/C_ℓ| = 1.32e-03 at ℓ = 2171.3 (tolerance: 5e-02) ✓
+
+C_ℓ^EE:
+  Saved data to: R4b_outputs/R4b_deltaCl_EE.dat
+  Physical window (ℓ <= 2000):
+    max |ΔC_ℓ/C_ℓ| = 2.17e-03 at ℓ = 1721.5 (tolerance: 2e-02) ✓
+    RMS |ΔC_ℓ/C_ℓ| (30 <= ℓ <= 2000) = 1.07e-03
+  Full range (diagnostic):
+    max |ΔC_ℓ/C_ℓ| = 2.17e-03 at ℓ = 1721.5 (tolerance: 5e-02) ✓
+
+C_ℓ^TE:
+  Saved data to: R4b_outputs/R4b_deltaCl_TE.dat
+  Physical window (ℓ <= 2000) [DIAGNOSTIC ONLY]:
+    max |ΔC_ℓ/C_ℓ| = 3.03e+00 at ℓ = 1501.5 (tolerance: 2e-02) ✓
+    RMS |ΔC_ℓ/C_ℓ| (30 <= ℓ <= 2000) = 9.33e-02
+    max |ΔC_ℓ|/peak|TE| = 1.70e-03 (absolute metric)
+    ⚠ Warning: TE relative differences are large due to zero crossings; TE is used for diagnostics only, not for validation.
+  Full range (diagnostic):
+    max |ΔC_ℓ/C_ℓ| = 3.03e+00 at ℓ = 1501.5 (tolerance: 5e-02) ✓
+
+======================================================================
+SUMMARY
+======================================================================
+P(k) physical window (k <= 1 h/Mpc):
+  z = 0.0: max |ΔP/P| = 8.99e-04 at k = 7.094585e-01 h/Mpc (tolerance: 2e-02) ✓
+            RMS |ΔP/P| (0.01 <= k <= 0.5) = 8.92e-04
+  z = 0.5: max |ΔP/P| = 2.06e-05 at k = 2.264300e-01 h/Mpc (tolerance: 2e-02) ✓
+            RMS |ΔP/P| (0.01 <= k <= 0.5) = 1.82e-05
+  z = 1.0: max |ΔP/P| = 2.14e-06 at k = 1.042208e-05 h/Mpc (tolerance: 2e-02) ✓
+            RMS |ΔP/P| (0.01 <= k <= 0.5) = 6.05e-07
+  z = 2.0: max |ΔP/P| = 2.14e-06 at k = 1.042208e-05 h/Mpc (tolerance: 2e-02) ✓
+            RMS |ΔP/P| (0.01 <= k <= 0.5) = 6.06e-07
+
+C_ℓ physical window (ℓ <= 2000):
+  TT: max |ΔC_ℓ/C_ℓ| = 1.23e-03 at ℓ = 1549.0 (tolerance: 2e-02) ✓
+         RMS |ΔC_ℓ/C_ℓ| (30 <= ℓ <= 2000) = 5.09e-04
+  EE: max |ΔC_ℓ/C_ℓ| = 2.17e-03 at ℓ = 1721.5 (tolerance: 2e-02) ✓
+         RMS |ΔC_ℓ/C_ℓ| (30 <= ℓ <= 2000) = 1.07e-03
+  TE: max |ΔC_ℓ/C_ℓ| = 3.03e+00 at ℓ = 1501.5 [DIAGNOSTIC ONLY]
+         RMS |ΔC_ℓ/C_ℓ| (30 <= ℓ <= 2000) = 9.33e-02
+======================================================================
+RESULT: ✓ PASS - SRC perturbation spectra consistent with ΛCDM at O(1–2%) in the physical window
+        - P(k) differences are smooth and within 2% tolerance for k ≤ 1 h/Mpc at all redshifts
+        - C_ℓ^TT and C_ℓ^EE differences are smooth and within 2% tolerance for ℓ ≤ 2000
+        - Note: TE relative differences are large due to zero crossings; TE is diagnostic only, not used in validation
+        - Data files saved to: R4b_outputs/

@@ -1,0 +1,20 @@
+[1;33m=== R1 Validation: CLASS_clean vs CLASS (SRC gamma0=0) ===[0m
+Working directory: /home/hamel/dev/cosmo-class
+
+[1;33m[1/6] Building CLASS_clean...[0m
+[0;32m✓ CLASS_clean built successfully[0m
+[1;33m[2/6] Setting up CLASS_clean LCDM run...[0m
+[0;32m✓ src_science_LCDM.ini already exists in CLASS_clean/[0m
+[1;33m[3/6] Running CLASS_clean LCDM...[0m
+[0;32m✓ CLASS_clean LCDM run completed[0m
+[1;33m[4/6] Building CLASS (SRC-modified)...[0m
+[0;32m✓ CLASS built successfully[0m
+[1;33m[5/6] Setting up CLASS SRC gamma0=0 run...[0m
+[0;32m✓ src_science_SRC_gamma0.ini already exists in CLASS/[0m
+[1;33m[6/6] Running CLASS SRC gamma0=0...[0m
+[0;32m✓ CLASS SRC gamma0=0 run completed[0m
+
+[0;32m=== Builds and Runs Complete ===[0m
+
+Next step: python3 compare_lcdm_clean_vs_src_gamma0.py
+

@@ -1,0 +1,42 @@
+======================================================================
+R4 Perturbation Spectra Validation: SRC vs LCDM
+======================================================================
+Working directory: /home/hamel/dev/cosmo-class
+
+Comparing P(k,z) at multiple redshifts...
+
+P(k) at z = 0.0...
+  Physical (k <= 1 h/Mpc): max ΔP/P = 9.03e-04 at k = 6.405385e-02 h/Mpc (tolerance: 2e-02) ✓
+  Full range: max ΔP/P = 9.02e-04 at k = 3.351020e+00 h/Mpc (tolerance: 1e-01) ✓
+
+P(k) at z = 0.5...
+  Physical (k <= 1 h/Mpc): max ΔP/P = 2.62e-05 at k = 8.427810e-02 h/Mpc (tolerance: 2e-02) ✓
+  Full range: max ΔP/P = 2.14e-05 at k = 1.690610e+00 h/Mpc (tolerance: 1e-01) ✓
+
+P(k) at z = 1.0...
+  Physical (k <= 1 h/Mpc): max ΔP/P = 4.36e-06 at k = 3.303397e-01 h/Mpc (tolerance: 2e-02) ✓
+  Full range: max ΔP/P = 4.57e-06 at k = 6.671841e+00 h/Mpc (tolerance: 1e-01) ✓
+
+P(k) at z = 2.0...
+  Physical (k <= 1 h/Mpc): max ΔP/P = 4.37e-06 at k = 3.303397e-01 h/Mpc (tolerance: 2e-02) ✓
+  Full range: max ΔP/P = 4.56e-06 at k = 6.671841e+00 h/Mpc (tolerance: 1e-01) ✓
+
+Comparing C_ℓ^TT (lensed)...
+  Physical (ℓ <= 2000): max ΔC_ℓ/C_ℓ = 1.23e-03 at ℓ = 1550.0 (tolerance: 2e-02) ✓
+  Full range: max ΔC_ℓ/C_ℓ = 1.32e-03 at ℓ = 2172.4 (tolerance: 5e-02) ✓
+
+======================================================================
+SUMMARY
+======================================================================
+P(k) physical window (k <= 1 h/Mpc):
+  z = 0.0: max ΔP/P = 9.03e-04 at k = 6.405385e-02 h/Mpc (tolerance: 2e-02) ✓
+  z = 0.5: max ΔP/P = 2.62e-05 at k = 8.427810e-02 h/Mpc (tolerance: 2e-02) ✓
+  z = 1.0: max ΔP/P = 4.36e-06 at k = 3.303397e-01 h/Mpc (tolerance: 2e-02) ✓
+  z = 2.0: max ΔP/P = 4.37e-06 at k = 3.303397e-01 h/Mpc (tolerance: 2e-02) ✓
+
+C_ℓ^TT physical window (ℓ <= 2000):
+  max ΔC_ℓ/C_ℓ = 1.23e-03 at ℓ = 1550.0 (tolerance: 2e-02) ✓
+======================================================================
+RESULT: ✓ PASS - SRC perturbation spectra consistent with ΛCDM at O(1–2%) in the physical window
+        - P(k) differences are smooth and within 2% tolerance for k ≤ 1 h/Mpc at all redshifts
+        - C_ℓ differences are smooth and within 2% tolerance for ℓ ≤ 2000

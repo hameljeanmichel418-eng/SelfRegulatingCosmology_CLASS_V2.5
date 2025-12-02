@@ -1,0 +1,123 @@
+if ! [ -e /home/hamel/dev/cosmo-class/CLASS/build ]; then mkdir /home/hamel/dev/cosmo-class/CLASS/build ; mkdir /home/hamel/dev/cosmo-class/CLASS/build/lib; fi;
+touch build/.base
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../tools/growTable.c -o growTable.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../tools/dei_rkck.c -o dei_rkck.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../tools/sparse.c -o sparse.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../tools/evolver_rkck.c -o evolver_rkck.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../tools/evolver_ndf15.c -o evolver_ndf15.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;g++ --std=c++11 -fpermissive -Wno-write-strings -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../tools/arrays.c -o arrays.opp
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../tools/parser.c -o parser.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../tools/quadrature.c -o quadrature.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;g++ --std=c++11 -fpermissive -Wno-write-strings -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../tools/hyperspherical.c -o hyperspherical.opp
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../tools/common.c -o common.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../tools/trigonometric_integrals.c -o trigonometric_integrals.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../source/input.c -o input.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../source/background.c -o background.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../source/thermodynamics.c -o thermodynamics.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;g++ --std=c++11 -fpermissive -Wno-write-strings -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../source/perturbations.c -o perturbations.opp
+cd /home/hamel/dev/cosmo-class/CLASS/build;g++ --std=c++11 -fpermissive -Wno-write-strings -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../source/primordial.c -o primordial.opp
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../source/fourier.c -o fourier.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;g++ --std=c++11 -fpermissive -Wno-write-strings -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../source/transfer.c -o transfer.opp
+cd /home/hamel/dev/cosmo-class/CLASS/build;g++ --std=c++11 -fpermissive -Wno-write-strings -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../source/harmonic.c -o harmonic.opp
+cd /home/hamel/dev/cosmo-class/CLASS/build;g++ --std=c++11 -fpermissive -Wno-write-strings -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../source/lensing.c -o lensing.opp
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../source/distortions.c -o distortions.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../external/RecfastCLASS/wrap_recfast.c -o wrap_recfast.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../external/heating/injection.c -o injection.o
+In file included from ../include/arrays.h:8,
+                 from ../include/distortions.h:9,
+                 from ../source/distortions.c:13:
+../source/distortions.c: In function ‘distortions_output_sd_titles’:
+../source/distortions.c:1948:32: warning: ‘__builtin___snprintf_chk’ output may be truncated before the last format character [-Wformat-truncation=]
+ 1948 |       class_sprintf(temp_title,"SD[e_%i]",(index_type-psd->index_type_PCA));
+      |                                ^~~~~~~~~~
+../include/common.h:111:44: note: in definition of macro ‘class_sprintf’
+  111 |   snprintf(string, _buffer_size_sprintf+1, format);                                                                \
+      |                                            ^~~~~~
+../source/distortions.c:1948:41: note: format string is defined here
+ 1948 |       class_sprintf(temp_title,"SD[e_%i]",(index_type-psd->index_type_PCA));
+      |                                         ^
+In file included from /usr/include/stdio.h:980,
+                 from ../include/common.h:3:
+In function ‘snprintf’,
+    inlined from ‘distortions_output_sd_titles’ at ../source/distortions.c:1948:7:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:54:10: note: ‘__builtin___snprintf_chk’ output between 8 and 18 bytes into a destination of size 17
+   54 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   55 |                                    __glibc_objsize (__s), __fmt,
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   56 |                                    __va_arg_pack ());
+      |                                    ~~~~~~~~~~~~~~~~~
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../external/heating/noninjection.c -o noninjection.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../external/HyRec2020/hyrectools.c -o hyrectools.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../external/HyRec2020/helium.c -o helium.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../external/HyRec2020/hydrogen.c -o hydrogen.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../external/HyRec2020/history.c -o history.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../external/HyRec2020/wrap_hyrec.c -o wrap_hyrec.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../external/HyRec2020/energy_injection.c -o energy_injection.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../external/Halofit/halofit.c -o halofit.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;g++ --std=c++11 -fpermissive -Wno-write-strings -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../external/HMcode/hmcode.c -o hmcode.opp
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../source/output.c -o output.o
+cd /home/hamel/dev/cosmo-class/CLASS/build;gcc -O3 -pthread  -g -fPIC -D__CLASSDIR__='"/home/hamel/dev/cosmo-class/CLASS"' -DHYREC -I../include -I../external/RecfastCLASS -I../external/heating -I../external/HyRec2020 -I../external/Halofit -I../external/HMcode -c ../main/class.c -o class.o
+g++ --std=c++11 -fpermissive -Wno-write-strings -O3 -pthread  -g -fPIC -o class build/growTable.o build/dei_rkck.o build/sparse.o build/evolver_rkck.o build/evolver_ndf15.o build/arrays.opp build/parser.o build/quadrature.o build/hyperspherical.opp build/common.o build/trigonometric_integrals.o build/input.o build/background.o build/thermodynamics.o build/perturbations.opp build/primordial.opp build/fourier.o build/transfer.opp build/harmonic.opp build/lensing.opp build/distortions.o build/wrap_recfast.o build/injection.o build/noninjection.o build/hyrectools.o build/helium.o build/hydrogen.o build/history.o build/wrap_hyrec.o build/energy_injection.o build/halofit.o build/hmcode.opp build/output.o build/class.o -lm
+ar rv  libclass.a build/growTable.o build/dei_rkck.o build/sparse.o build/evolver_rkck.o build/evolver_ndf15.o build/arrays.opp build/parser.o build/quadrature.o build/hyperspherical.opp build/common.o build/trigonometric_integrals.o build/input.o build/background.o build/thermodynamics.o build/perturbations.opp build/primordial.opp build/fourier.o build/transfer.opp build/harmonic.opp build/lensing.opp build/distortions.o build/wrap_recfast.o build/injection.o build/noninjection.o build/hyrectools.o build/helium.o build/hydrogen.o build/history.o build/wrap_hyrec.o build/energy_injection.o build/halofit.o build/hmcode.opp
+ar: creating libclass.a
+a - build/growTable.o
+a - build/dei_rkck.o
+a - build/sparse.o
+a - build/evolver_rkck.o
+a - build/evolver_ndf15.o
+a - build/arrays.opp
+a - build/parser.o
+a - build/quadrature.o
+a - build/hyperspherical.opp
+a - build/common.o
+a - build/trigonometric_integrals.o
+a - build/input.o
+a - build/background.o
+a - build/thermodynamics.o
+a - build/perturbations.opp
+a - build/primordial.opp
+a - build/fourier.o
+a - build/transfer.opp
+a - build/harmonic.opp
+a - build/lensing.opp
+a - build/distortions.o
+a - build/wrap_recfast.o
+a - build/injection.o
+a - build/noninjection.o
+a - build/hyrectools.o
+a - build/helium.o
+a - build/hydrogen.o
+a - build/history.o
+a - build/wrap_hyrec.o
+a - build/energy_injection.o
+a - build/halofit.o
+a - build/hmcode.opp
+export CC=gcc; output=$(python -m pip install . 2>&1); \
+    echo "$output"; \
+    if echo "$output" | grep -q "ERROR: Cannot uninstall"; then \
+        site_packages=$(python -c "import distutils.sysconfig; print(distutils.sysconfig.get_python_lib())" || python -c "import site; print(site.getsitepackages()[0])") && \
+        echo "Cleaning up previous installation in: $site_packages" && \
+        rm -rf $site_packages/classy* && \
+        python -m pip install .; \
+    fi
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+    
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    See /usr/share/doc/python3.12/README.venv for more information.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.

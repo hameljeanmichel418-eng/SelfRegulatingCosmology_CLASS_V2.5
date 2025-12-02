@@ -1,0 +1,54 @@
+======================================================================
+R5 Late-time H(z) & Distance Diagnostics: SRC vs LCDM
+======================================================================
+Working directory: /home/hamel/dev/cosmo-class
+
+Reading background files...
+  LCDM: 40000 points, z ∈ [0.000, 100000000000000.000]
+  SRC:  40000 points, z ∈ [0.000, 100000000000000.000]
+
+Late-time physical window: 0.0 <= z <= 2.0
+
+Computing ΔH/H(z) = (H_SRC - H_LCDM) / H_LCDM...
+  max |ΔH/H| = 2.04e-03 at z = 0.000
+
+Computing Δχ/χ(z) = (χ_SRC - χ_LCDM) / χ_LCDM...
+  max |Δχ/χ| = 3.99e-05 at z = 0.000
+
+Computing luminosity distance ratios at sample redshifts...
+  z      ΔD_L/D_L
+  0.10   -2.511311e-05
+  0.25   -9.277536e-06
+  0.50   -6.984177e-07
+  1.00   -2.616804e-10
+  2.00   +0.000000e+00
+
+Exporting data file...
+  Saved to: R5_outputs/R5_delta_background.dat
+
+======================================================================
+VALIDATION CRITERIA
+======================================================================
+max |ΔH/H| in [1e-04, 5e-02]: 2.04e-03 at z = 0.000 ✓
+max |Δχ/χ| < 5e-02: 3.99e-05 at z = 0.000 ✓
+======================================================================
+SUMMARY
+======================================================================
+max |ΔH/H| = 2.04e-03 at z = 0.000
+  (tolerance window: [1e-04, 5e-02])
+max |Δχ/χ| = 3.99e-05 at z = 0.000
+  (tolerance: 5e-02)
+
+Luminosity distance ratios:
+  z      ΔD_L/D_L
+  0.10   -2.511311e-05
+  0.25   -9.277536e-06
+  0.50   -6.984177e-07
+  1.00   -2.616804e-10
+  2.00   +0.000000e+00
+
+======================================================================
+RESULT: ✓ PASS - SRC late-time modulation is non-trivial and within expected range
+        - H(z) modulation is detectable (≥ 1×10⁻⁴) and moderate (≤ 5×10⁻²)
+        - Distance deviations remain within 5% tolerance
+        - Data file saved to: R5_outputs/R5_delta_background.dat

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this SRC implementation or validation pipeline, please cite this software."
+
+title: "Self-Regulating Cosmology (SRC) Implementation in CLASS"
+version: "2.5"
+date-released: "2025-11-23"
+authors:
+  - family-names: "Hamel"
+    given-names: "Jm"
+keywords:
+  - cosmology
+  - CLASS
+  - primordial black holes
+  - scalar field
+  - late-time expansion
+license: "MIT"
